@@ -63,7 +63,7 @@ float Compressor::interpolatePoints(const float* xPoints,
                 term *= (detectedValue - xPoints[j]) / (xPoints[i] - xPoints[j]);
             }
         }
-        result *= term * yPoints[i];
+        result += term * yPoints[i];
     }
 
     return result;
